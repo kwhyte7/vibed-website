@@ -52,8 +52,6 @@
 
 #root {
   width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -63,13 +61,17 @@
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  font-family: var(--sans);
 }
 
 h1,
-h2 {
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--heading);
-  font-weight: 500;
+  font-weight: 600;
   color: var(--text-h);
 }
 
@@ -80,14 +82,24 @@ h1 {
 }
 
 h2 {
+  font-size: 28px;
+  line-height: 1.2;
+  margin: 0 0 16px;
+}
+
+h3 {
+  font-size: 24px;
+  margin: 0 0 12px;
+}
+
+h4 {
   font-size: 20px;
-  line-height: 118%;
-  letter-spacing: -0.2px;
   margin: 0 0 8px;
 }
 
 p {
   margin: 0;
+  line-height: 1.6;
 }
 
 code {
