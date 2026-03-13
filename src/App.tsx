@@ -73,7 +73,7 @@ function App() {
       }
 
       const data = await response.json()
-      
+
       const assistantMessage: Message = {
         id: messages.length + 2,
         content: data.message.content,
@@ -103,14 +103,14 @@ function App() {
     }
   }
 
-  const clearChat = () => {
+  /*const clearChat = () => {
     setMessages([{
       id: 1,
       content: 'Chat cleared. How can I help you?',
       role: 'assistant',
       timestamp: new Date()
     }])
-  }
+  }*/
 
   return (
     <div className="app-container">
@@ -241,8 +241,8 @@ function App() {
             </div>
             <div className="chat-messages">
               {messages.map((message) => (
-                <div 
-                  key={message.id} 
+                <div
+                  key={message.id}
                   className={`chat-message ${message.role}`}
                 >
                   <div className="message-bubble">
@@ -276,7 +276,7 @@ function App() {
                 rows={2}
               />
               <div className="chat-controls">
-                <select 
+                <select
                   value={model}
                   onChange={(e) => setModel(e.target.value)}
                   className="model-select"
@@ -289,8 +289,8 @@ function App() {
                     <option value="llama2">llama2</option>
                   )}
                 </select>
-                <button 
-                  onClick={sendMessage} 
+                <button
+                  onClick={sendMessage}
                   disabled={isLoading || !input.trim()}
                   className="send-btn"
                 >
